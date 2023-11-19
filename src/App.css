@@ -1,38 +1,71 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/Inter-Regular.woff2") format("woff2"),
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #EEEEEE;
 }
 
-.App-link {
-  color: #61dafb;
+.cost-input{
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.customInput{
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 59px;
+  position: relative;
+  width: 145px;
+  outline:none;
+  border: none;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+
+.placeholder{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  color: #b0afaf;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  transition: top .3s ease, font-size .3s ease, left .3s ease;
+}
+
+.placeholderUp{
+  top: -2px;
+  left: 66px;
+  font-size: 14px;
+}
+
+input{
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 16px;
+}
+
+::placeholder {
+  color: #b0afaf;
 }
